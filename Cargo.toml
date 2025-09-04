@@ -1,0 +1,15 @@
+[package]
+name = "coding-challenges"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+members=["ccwc"]
+resolver = "2"
+
+[[bin]]
+name = "ccwc"
+path = "ccwc/src/main.rs"
+
+[dependencies]
+clap = { version = "=4.5.40", features = ["derive"] }
