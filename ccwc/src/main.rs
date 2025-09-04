@@ -43,18 +43,15 @@ impl Data {
     }
 
     fn get_lines(&self) -> usize {
-        self.contents.lines().collect::<Vec<&str>>().len()
+        self.contents.lines().count()
     }
 
     fn get_chars(&self) -> usize {
-        self.contents.chars().collect::<Vec<char>>().len()
+        self.contents.chars().count()
     }
 
     fn get_words(&self) -> usize {
-        self.contents
-            .split_whitespace()
-            .collect::<Vec<&str>>()
-            .len()
+        self.contents.split_whitespace().count()
     }
 }
 
